@@ -12,22 +12,27 @@
             border-radius: 10px;
             border-color: lightseagreen;
             background-color: white;
+            width: 80%;
         }
         td {
-            border-color: white
+            border-color: white;
+            border-radius: 10px;
         }
         body {
-    background: rgb(207, 225, 252)
-}
+            background: rgb(207, 225, 252);
+        }
+        h1 {
+
+        }
     </style>
 </head>
 <body>
-    <h1>Notícias</h1>
+    <h1>Lista de Notícias</h1>
     <table border='2' align='center'>
         <tbody>
             {% for noticia in noticias %}
             <tr>
-                <td><img src='{{ noticia.imagem }}'/></td>
+                <td height='50px'width='50'><img src='{{ noticia.imagem }}'/></td>
                 <td>{{ noticia.titulo }}<br>{{ noticia.resumo }}</td>
             </tr>
             {% endfor %}
