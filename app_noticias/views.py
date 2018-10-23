@@ -104,7 +104,7 @@ def categoria_detalhes(request, slug):
         return Http404('Categoria não encontrada')
 
 def todas_noticias(request):
-    noticias = Noticia.objects.all()
+    noticias = Noticia.objects.all().order_by('-data_de_publicacao')
     return render(request, 'app_noticias/todas_noticias.html',{
         'noticias': noticias
     })
