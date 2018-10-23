@@ -102,3 +102,9 @@ def categoria_detalhes(request, slug):
         })
     except Categoria.DoesNotExist:
         return Http404('Categoria não encontrada')
+
+def todas_noticias(request):
+    noticias = Noticia.objects.all()
+    return render(request, 'app_noticias/todas_noticias.html',{
+        'noticias': noticias
+    })
